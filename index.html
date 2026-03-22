@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Para mi meme tiquitita besha ❤️</title>
+
+<style>
+body{
+  margin:0;
+  font-family:Arial;
+  text-align:center;
+  overflow:hidden;
+
+  background: linear-gradient(270deg, #fff3b0, #ffd60a, #ffea00);
+  background-size: 600% 600%;
+  animation: fondoMove 8s ease infinite;
+}
+
+/* fondo animado */
+@keyframes fondoMove{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
+
+/* TITULO */
+h1{
+  margin-top:20px;
+  color:#8a5c00;
+  animation: brillo 2s infinite;
+}
+
+/* brillo texto */
+@keyframes brillo{
+  0%,100%{text-shadow:0 0 5px #fff;}
+  50%{text-shadow:0 0 20px #fff, 0 0 30px yellow;}
+}
+
+/* BOTON */
+button{
+  padding:10px 20px;
+  border:none;
+  border-radius:20px;
+  background:#ffcc00;
+  cursor:pointer;
+  margin-bottom:10px;
+  transition:0.3s;
+}
+
+button:hover{
+  transform:scale(1.1);
+}
+
+/* ❤️ CORAZON */
+.corazon{
+  font-size:180px;
+  animation: latido 1s infinite;
+}
+
+@keyframes latido{
+  0%,100%{transform:scale(1);}
+  50%{transform:scale(1.2);}
+}
+
+/* CONTENEDOR */
+.contenedor{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:40px;
+}
+
+/* 🌼 RAMO */
+img[src="ramo.jpg"]{
+  width:300px;
+  animation: flotar 3s ease-in-out infinite;
+  transition:0.5s;
+}
+
+/* 📸 FOTO */
+img[src="holaa.jpg"]{
+  width:250px;
+  height:250px;
+  border-radius:20px;
+  object-fit:cover;
+  border:5px solid white;
+  animation: flotar 3s ease-in-out infinite;
+  transition:0.5s;
+}
+
+/* ✨ hover fotos */
+img[src="ramo.jpg"]:hover,
+img[src="holaa.jpg"]:hover{
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+/* animación flotar */
+@keyframes flotar{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-10px);}
+}
+
+/* 💌 CARTA */
+.carta{
+  position: fixed;
+  bottom: -350px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  transition: 0.5s;
+}
+
+/* emoji arriba */
+.carta::before{
+  content: "💌";
+  display: block;
+  font-size: 30px;
+  margin-bottom: 10px;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: 0.5s;
+}
+
+/* cuando se abre */
+.carta.show{
+  bottom: 40px;
+}
+
+.carta.show::before{
+  opacity: 1;
+  transform: translateY(0);
+}
+img[src="ramo.jpg"],
+img[src="holaa.jpg"]{
+  position: relative;
+  top: -180px; /* 👈 sube las imágenes */
+}
+.carta{
+  position: fixed;
+  bottom: -350px;
+  left: 50%;
+  transform: translateX(-50%) scale(0.8);
+  opacity: 0;
+  transition: 0.4s;
+
+  background: black;
+  color: red;
+  padding: 20px;
+  border-radius: 15px;
+  width: 260px;
+  text-align: center;
+}
+
+.carta.show{
+  bottom: 40px;
+  transform: translateX(-50%) scale(1);
+  opacity: 1;
+}
+.carta{
+  box-shadow: 0 0 10px red, 
+              0 0 20px red, 
+              0 0 40px darkred;
+}
+.carta p{
+  text-shadow: 0 0 5px red, 0 0 10px red;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>Te amo mi meme tiquitita besha 💛</h1>
+
+<button onclick="mostrarCarta()">Abrir sorpresa</button>
+
+<div class="corazon">❤️</div>
+
+<div class="contenedor">
+
+  <!-- 🌼 RAMO -->
+  <img src="ramo.jpg">
+
+  <!-- 📸 FOTO -->
+  <img src="holaa.jpg">
+
+</div>
+
+<!-- 💌 MENSAJE -->
+<div class="carta" id="carta">
+  <p>TE  AMOO   DEMASIADOOO   MI   PRINCESITA   HERMOSA   BESHA   PRECIOSA   BOTINA   PERFECTA... 
+    TE   JURO   QUE   TE   AMO   CON   TODO   MI   CORAZONCITO   Y   SIEMPRE   VA   A   SER   ASI,   NUNCA   ME   VOY   A   ALEJAR   DE   VOS,   ME   VAS   A   TENER   QUE   AGUANTAR   TODA   LA   VIDA. JUNTITOS   VAMOS   A   SALIR   ADELANTE   Y   ALGUN   DIA   TE   DARE   TODO   LO   QUE   TE   MERECES.   GRACIAS   POR   HACER   MI   VIDA   MUY   ESPECIAL,   CADA   VEZ   QUE   VEO   ESA SONRISITA   Y   ESOS   OJITOS   BESHOS   QUEDO   MASIADO   FASCINADO,   SOS   PERFECTA   MEME   NO DEJES   QUE   NADIE   TE   DIGA   LO   CONTRARIO.   TE   AMO   CON   TODO   MI   CORAZONCITO   Y   CON   TODO   MI   SER   MI   MEME   TIQUITITA   BESHAA!!! 
+    Y   QUE   NUNCA   SE   TE   OLVIDE   QUE   LO   NUESTRO   ES   PARA   SIEMPRE ❤️❤️‍🩹♾️
+
+  </p>
+</div>
+
+<script>
+function mostrarCarta(){
+  document.getElementById("carta").classList.toggle("show");
+}
+</script>
+
+</body>
+</html>
